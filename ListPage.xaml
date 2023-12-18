@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Puscas_Andrei_Lab3.ListPage"
+             Title="ListPage">
+    <VerticalStackLayout Margin="20"
+                         Spacing="10">
+        <Editor 
+                Placeholder="Enter the description of the shopping list"          
+                Text="{Binding Description}"                
+                HeightRequest="100"/>
+        <Editor 
+                Placeholder="Store Address"          
+                Text="{Binding Address}"                
+                HeightRequest="100"
+                FontAttributes="Bold"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Save" BackgroundColor="Green" CornerRadius="10" Clicked="OnSaveButtonClicked"/>
+            <Button Grid.Column="1" Text="Delete" BackgroundColor="Red" CornerRadius="10" Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
